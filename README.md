@@ -1,3 +1,7 @@
+<p align="center">
+<img src="screenshots/reel_app_screenshot.png"  />
+</p>
+
 ## Architecture
 - Clean Architecture
 - MVVM
