@@ -1,6 +1,16 @@
+Tihran Chilinharian Technical Exercise
+
 <p align="center">
 <img src="screenshots/reel_app_screenshot.png"  />
 </p>
+
+## Planned Features (Not Implemented Due to Time Constraints):
+- Proper navigation structure
+- Modularization of the project
+- Secure storage for the API key
+- Integration of a local database
+- Comprehensive test coverage beyond just the ViewModel
+- GitHub Actions for CI/CD
 
 ## Architecture
 - Clean Architecture
