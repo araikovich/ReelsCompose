@@ -48,7 +48,7 @@ fun ReelActions(
         )
         Icon(
             painter = painterResource(id = R.drawable.ic_share),
-            contentDescription = "Like",
+            contentDescription = "Share",
             tint = Color.White,
             modifier = Modifier
                 .padding(top = ImagePadding.dp)

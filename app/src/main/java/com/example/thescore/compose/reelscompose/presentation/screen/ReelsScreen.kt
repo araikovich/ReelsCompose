@@ -42,9 +42,9 @@ fun ReelsScreen(
             .background(MaterialTheme.colorScheme.primary)
             .safeDrawingPadding()
     ) {
-        val reels = state.value
+        val data = state.value
         when {
-            reels.isError -> {
+            data.isError -> {
                 Column(modifier = Modifier.align(Alignment.Center)) {
                     Text(
                         text = stringResource(id = R.string.something_went_wrong),
@@ -63,7 +63,7 @@ fun ReelsScreen(
                 }
             }
 
-            state.value.isLoading -> {
+            data.isLoading -> {
                 CircularProgressIndicator(
                     modifier = Modifier
                         .width(ProgressBarWidth.dp)
@@ -75,7 +75,7 @@ fun ReelsScreen(
 
             else -> {
                 ReelsPager(
-                    items = state.value.reels?.reels.orEmpty(),
+                    items = data.reels?.reels.orEmpty(),
                     onLikeClick = { reelId ->
                         viewModel.onLike(reelId)
                     },
@@ -83,7 +83,7 @@ fun ReelsScreen(
                         viewModel.onShare(reelId)
                     })
                 Text(
-                    text = state.value.reels?.title.orEmpty(),
+                    text = data.reels?.title.orEmpty(),
                     color = Color.White,
                     modifier = Modifier
                         .padding(TitleTextPadding.dp)
